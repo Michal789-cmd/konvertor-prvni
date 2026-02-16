@@ -83,13 +83,13 @@
   };
 
   bindChoice("step1", "note1", '[data-next]', {
-    ignore: "Hezký pokus… stejně bych tě nakonec našel. 😄",
+    ignore: "Hezký pokus… stejně bych to nakonec nevydržel. 😄",
     date: "Tohle bylo nejlepší rozhodnutí posledních 8 let. ❤️"
   });
 
   bindChoice("step2", "note2", '[data-next]', {
-    run: "Naštěstí jsem neutekl. (I když někdy jsem se tvářil, že přemýšlím.) 😅",
-    stay: "Zůstal jsem. A z domu se stal domov. ❤️"
+    run: "Naštěstí jsem neutekl. (I když někdy jsem se možná tvářil, že přemýšlím.) 😅",
+    stay: "Zůstal jsem. Začalo to být velmi vážné a z domu se stal domov. ❤️"
   });
 
   bindChoice("step3", "note3", '[data-next]', {
