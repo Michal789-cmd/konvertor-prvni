@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>8 let spolu ❤️</title>
+  <meta name="description" content="Malá interaktivní mini-hra k výročí." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="bg"></div>
+
+  <main class="wrap">
+    <header class="topbar">
+      <div class="badge">8 let</div>
+      <div class="tiny">mini-hra o našem příběhu</div>
+    </header>
+
+    <section class="card">
+      <div class="progress">
+        <div class="progress__bar" id="progressBar"></div>
+      </div>
+
+      <!-- SCREEN: INTRO -->
+      <section class="screen is-active" data-screen="intro" data-step="1">
+        <div class="hero">
+          <img class="hero__img" src="./assets/cover.jpg" alt="Společná fotka" />
+          <div class="hero__overlay"></div>
+          <div class="hero__content">
+            <h1>Co kdybych mohl vrátit čas o 8 let zpět…</h1>
+            <p class="lead">Vybral bych si stejnou cestu?</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <p class="hint">Klikni a začneme. Zabere to jen pár minut.</p>
+          <div class="actions">
+            <button class="btn btn--primary" data-go="start">Zjistit odpověď</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN: STEP 1 -->
+      <section class="screen" data-screen="step1" data-step="2">
+        <div class="media">
+          <img src="./assets/moment1.jpg" alt="Vzpomínka" />
+        </div>
+
+        <div class="content">
+          <h2>Potkám holku, která mi obrátí život vzhůru nohama.</h2>
+          <p class="lead">Co udělám?</p>
+
+          <div class="choices">
+            <button class="btn" data-choice="ignore">Ignorovat ji 😄</button>
+            <button class="btn btn--primary" data-choice="date">Pozvat ji na rande ❤️</button>
+          </div>
+
+          <p class="note" id="note1" aria-live="polite"></p>
+
+          <div class="actions">
+            <button class="btn btn--ghost" data-back>← Zpět</button>
+            <button class="btn btn--primary" data-next disabled>Pokračovat →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN: STEP 2 -->
+      <section class="screen" data-screen="step2" data-step="3">
+        <div class="media">
+          <img src="./assets/family.jpg" alt="Rodina" />
+        </div>
+
+        <div class="content">
+          <h2>Začne to být vážné…</h2>
+          <p class="lead">Zůstanu?</p>
+
+          <div class="choices">
+            <button class="btn" data-choice="run">Utéct 😅</button>
+            <button class="btn btn--primary" data-choice="stay">Zůstat ❤️</button>
+          </div>
+
+          <p class="note" id="note2" aria-live="polite"></p>
+
+          <div class="actions">
+            <button class="btn btn--ghost" data-back>← Zpět</button>
+            <button class="btn btn--primary" data-next disabled>Pokračovat →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN: STEP 3 -->
+      <section class="screen" data-screen="step3" data-step="4">
+        <div class="media">
+          <img src="./assets/chaos.jpg" alt="Děti / chaos / radost" />
+        </div>
+
+        <div class="content">
+          <h2>Pak se stanou věci, které změní všechno.</h2>
+          <p class="lead">Jaké to je?</p>
+
+          <div class="choices">
+            <button class="btn" data-choice="panic">Panika 😄</button>
+            <button class="btn" data-choice="both">Obojí 😅</button>
+            <button class="btn btn--primary" data-choice="joy">Největší štěstí ❤️</button>
+          </div>
+
+          <p class="note" id="note3" aria-live="polite"></p>
+
+          <div class="callout">
+            <strong>Malá věta pro největší sílu:</strong>
+            <span id="kidsLine">Vzniklo to nejkrásnější, co jsme kdy dokázali.</span>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn--ghost" data-back>← Zpět</button>
+            <button class="btn btn--primary" data-next disabled>Pokračovat →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN: STEP 4 -->
+      <section class="screen" data-screen="step4" data-step="5">
+        <div class="media">
+          <img src="./assets/finale.jpg" alt="Finále" />
+        </div>
+
+        <div class="content">
+          <h2>Není to vždy jednoduché.</h2>
+          <p class="lead">Ale…</p>
+
+          <div class="choices">
+            <button class="btn" data-choice="chaos">Občas je to chaos 😄</button>
+            <button class="btn btn--primary" data-choice="worth">Stojí to za to ❤️</button>
+          </div>
+
+          <p class="note" id="note4" aria-live="polite"></p>
+
+          <div class="actions">
+            <button class="btn btn--ghost" data-back>← Zpět</button>
+            <button class="btn btn--primary" data-next disabled>Jít na finále →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN: FINAL -->
+      <section class="screen" data-screen="final" data-step="6">
+        <div class="content">
+          <h2 class="center">Tak co… vybral bych si tenhle život znovu?</h2>
+
+          <div class="choices center">
+            <button class="btn btn--primary big" data-final="yes1">Ano. Bez váhání.</button>
+            <button class="btn big" data-final="yes2">Ano. A milionkrát znovu.</button>
+          </div>
+
+          <div class="finalbox" id="finalBox" hidden>
+            <h3>Já ano.</h3>
+            <p id="finalText">
+              A vždycky bych si vybral tebe. Děkuju, že jsi moje žena a máma našich dětí. ❤️
+            </p>
+
+            <!-- Volitelné: audio -->
+            <div class="audio" id="audioWrap" hidden>
+              <button class="btn btn--ghost" id="playAudio">▶ Pustit hlasovku</button>
+              <audio id="audioEl" src="./assets/audio.mp3" preload="auto"></audio>
+              <div class="tiny muted">Pokud nechceš audio, smaž assets/audio.mp3 a audio zůstane skryté.</div>
+            </div>
+
+            <div class="actions center">
+              <button class="btn btn--primary" id="closePhone">Teď zavři mobil a pojď za mnou ❤️</button>
+              <button class="btn btn--ghost" id="restart">Hrát znovu</button>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn--ghost" data-back>← Zpět</button>
+          </div>
+        </div>
+
+        <canvas id="confetti" aria-hidden="true"></canvas>
+      </section>
+
+    </section>
+
+    <footer class="footer">
+      <span class="tiny muted">Tip: Vyměň obrázky v /assets a uprav texty v index.html</span>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
