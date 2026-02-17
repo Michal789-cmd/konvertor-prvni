@@ -171,7 +171,7 @@
   const closePhoneBtn = document.getElementById("closePhone");
   if (closePhoneBtn) {
     closePhoneBtn.addEventListener("click", () => {
-      alert("❤️");
+      alert("Miluju tě ❤️");
     });
   }
 
